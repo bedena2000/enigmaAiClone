@@ -7,7 +7,7 @@ export default function RootPage() {
       <Header />
 
       <div>
-        <Outlet />
+        <Outlet />  
       </div>
     </div>
   );
