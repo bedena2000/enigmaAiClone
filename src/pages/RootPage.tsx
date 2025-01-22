@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 export default function RootPage() {
   return (
-    <div className="min-h-screen bg-primary p-4 relative">
+    <div className="min-h-screen bg-primary pt-4 relative">
       <Header />
 
       <div>

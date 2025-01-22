@@ -59,8 +59,15 @@ export default function Header() {
       </div>
 
       <Link
-        className="px-5 py-1 border-2 rounded-full bg-transparent shadow-md border-gray-600"
         to="/download"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(204, 204, 204, 0.0878079) 20.17%, rgba(0, 0, 0, 0) 100%)",
+          boxShadow: "0px 30px 60px 0px rgba(0, 0, 0, 0.25)",
+          backdropFilter: "blur(40px)", // Applied blur filter
+          border: "1px solid rgba(255, 255, 255, 0.4)", // Border applied as per your request
+        }}
+        className="px-5 py-1 border-2 rounded-full bg-transparent shadow-md` text-white font-medium text-base"
       >
         <p className="text-white font-bold text-base">Download App</p>
       </Link>

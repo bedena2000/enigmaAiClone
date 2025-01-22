@@ -2,11 +2,21 @@ import { ReactTyped } from "react-typed";
 import RightArrowIcon from "@/assets/icons/rightArrow.png";
 import CodeEditor from "@/assets/codeEditor.png";
 
+// SubPages
+import Section_trusted from "./pageUI/homePageUI/Section_trusted";
+import Section_development from "./pageUI/homePageUI/Section_development";
+import Section_workflow from "./pageUI/homePageUI/Section_workflow";
+import Section_subscribe from "./pageUI/homePageUI/Section_subscribe";
+import Section_questions from "./pageUI/homePageUI/Section_questions";
+import Section_download from "./pageUI/homePageUI/Section_download";
+import Section_subscribe_by_email from "./pageUI/homePageUI/Section_subscribe_by_email";
+import Footer from "./pageUI/shared/Footer";
+
 export default function Home() {
   return (
-    <div className="relative text-white overflow-hidden min-h-screen">
-      <section className="customContainer mt-[112px] mb-[64px] flex items-center gap-[38px] ">
-        <div className="w-[468px] mt-[228px]">
+    <div className="relative text-white overflow-hidden min-h-screen mt-[112px]">
+      <section className="customContainer mb-[64px] flex items-center gap-[38px]">
+        <div className="w-[468px]">
           <div className="bg-gradient-to-r from-white to-transparent bg-clip-text text-transparent text-5xl font-bold mb-5">
             <ReactTyped
               strings={["Unlock Your Coding Potential with Enigma Code-ai"]}
@@ -20,10 +30,24 @@ export default function Home() {
             powerful applications.
           </p>
           <div className="mt-5 flex items-center gap-5">
-            <button className="flex items-center gap-2 px-3 py-[6px] rounded-lg font-bold text-white bg-[conic-gradient(from_179.42deg_at_47.87%_-110.87%,_#1ADBE3_-25.84deg,_#7001D3_0.27deg,_#FE6272_22.53deg,_#BD38FF_127.5deg,_#1752CA_196.87deg,_#1ADBE3_334.16deg,_#7001D3_360.27deg)] backdrop-blur-lg">
+            <button className="flex items-center gap-2 px-3 py-[6px] rounded-lg font-bold text-white bg-conic-gradient border-[1px] border-white">
               Get Started
             </button>
-            <button className="px-3 py-[6px] rounded-lg text-white backdrop-blur-[20px] shadow-[0px_10px_10px_0px_#0000001A,0px_4px_4px_0px_#0000000D,0px_1px_0px_0px_#0000000D] border border-transparent flex items-center gap-2 border-sky-500">
+
+            <button
+              className="flex items-center gap-2 px-3 py-[6px] rounded-lg"
+              style={{
+                background: "rgba(0, 0, 0, 0.5)",
+                border: "1px solid rgba(255, 255, 255, 0.7)", // Basic border
+                borderImageSource:
+                  "linear-gradient(0deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.07)), linear-gradient(35.22deg, rgba(255, 255, 255, 0) 33.61%, #FFFFFF 89.19%)", // Gradient border
+                backdropFilter: "blur(20px)", // Backdrop blur filter
+                boxShadow: `
+                  0px 10px 10px 0px rgba(0, 0, 0, 0.1), 
+                  0px 4px 4px 0px rgba(0, 0, 0, 0.05), 
+                  0px 1px 0px 0px rgba(0, 0, 0, 0.05)`, // Multiple box shadows
+              }}
+            >
               <p>Start a Free Trial</p>
               <img src={RightArrowIcon} alt="rightArrowIcon" />
             </button>
@@ -32,7 +56,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute top-[141px] right-0 scale-125">
+        <div>
           <img
             src={CodeEditor}
             alt="mainCodeEditorPicture"
@@ -40,6 +64,18 @@ export default function Home() {
           />
         </div>
       </section>
+
+
+      <Section_trusted />
+      <Section_development />
+      <Section_workflow />
+      <Section_subscribe />
+      <Section_questions />
+      <Section_download />
+      <Section_subscribe_by_email />
+      
+      <Footer />
+
     </div>
   );
 }
